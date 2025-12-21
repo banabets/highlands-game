@@ -999,7 +999,7 @@
         .nav{ display: none; }
         body{ background-attachment: scroll; }
         .topbar{ height: 120px; }
-        .brand img{ width: 120px; height: 120px; left: 10px; }
+        .brand img{ width: 100px; height: 100px; left: 10px; }
         .sectionTitle{ font-size: 40px; }
         .statsContainer{ padding: 18px; margin-top: 40px; }
         .statsRow{ gap: 15px; }
@@ -1019,7 +1019,7 @@
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
-        .brand img{ width: 80px; height: 80px; }
+        .brand img{ width: 70px; height: 70px; }
         .sectionTitle{ font-size: 32px; }
         .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
         .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
@@ -1042,7 +1042,7 @@
         .heroTitle{ font-size: 24px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
-        .brand img{ width: 80px; height: 80px; }
+        .brand img{ width: 70px; height: 70px; }
         .sectionTitle{ font-size: 26px; }
         .statsContainer{ padding: 12px; margin-top: 20px; }
         .stat{ padding: 6px 6px; }
