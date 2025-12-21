@@ -1014,7 +1014,7 @@
       }
 
       @media (max-width: 600px){
-        .heroTitle{ font-size: 28px; line-height: 0.95; }
+        .heroTitle{ font-size: 36px; line-height: 0.95; }
         .heroP{ font-size: 24px; margin: 30px auto 12px; }
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
@@ -1039,7 +1039,7 @@
 
       @media (max-width: 400px){
         .page{ padding: 12px 8px; }
-        .heroTitle{ font-size: 24px; }
+        .heroTitle{ font-size: 32px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
         .brand img{ width: 60px; height: 60px; }
