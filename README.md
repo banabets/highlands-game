@@ -134,3 +134,5 @@ npm run dev
 ---
 
 Built with ❤️ by UNICORN LABS
+
+**Last updated:** December 2025
