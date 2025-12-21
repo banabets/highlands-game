@@ -50,7 +50,6 @@
       ]
     }
   ],
-  "functions": {},
   "regions": ["iad1"],
   "outputDirectory": "."
 }
