@@ -21,13 +21,13 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unicorn-labs/highlands.git"
+    "url": "git+https://github.com/banabets/highlands-game.git"
   },
   "homepage": "https://playhighlands.net",
   "engines": {
-    "node": ">=14.0.0"
+    "node": "18.x"
   },
   "devDependencies": {
-    "vercel": "^28.0.0"
+    "vercel": "^37.0.0"
   }
 }
