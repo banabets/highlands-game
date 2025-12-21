@@ -305,9 +305,12 @@
 
       .play-icon{
         margin-right: 8px;
-        font-size: 16px;
-        font-weight: bold;
         opacity: 0.9;
+      }
+
+      .play-icon svg{
+        width: 16px;
+        height: 16px;
       }
 
       .btnWhitepaper{
@@ -733,6 +736,15 @@
         margin-top: 6px;
       }
 
+      .feature-image{
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 22px;
+        display: block;
+        margin: 0 auto;
+      }
+
       .featureCard{
         position: relative;
         border-radius: 22px;
@@ -1006,14 +1018,20 @@
         .heroP{ font-size: 24px; margin: 30px auto 12px; }
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
-        .brand img{ width: 100px; height: 100px; }
+        .brand{ padding: 8px 12px; }
+        .brand img{ width: 80px; height: 80px; }
         .sectionTitle{ font-size: 32px; }
-        .statsContainer{ padding: 15px; margin-top: 30px; }
-        .statsRow{ flex-direction: column; gap: 10px; align-items: center; }
-        .statGroup{ min-width: unset; width: 100%; text-align: center; }
+        .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
+        .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
+        .statGroup{ min-width: unset; width: 100%; text-align: center; padding: 15px 10px; }
+        .statLabel{ font-size: 12px; margin-bottom: 8px; }
+        .statValue{ font-size: 18px; }
+        .play-icon{ margin-right: 6px; font-size: 14px; }
         .videoContainer{ margin: 20px auto; }
         .tvFrame{ padding: 20px; }
-        .caSection{ margin: 30px auto 15px; }
+        .caSection{ margin: 15px auto 15px; }
+        .cardsRow{ gap: 20px; grid-template-columns: 1fr; }
+        .feature-image{ width: 100%; max-width: 350px; height: 400px; }
         .socialIcons{ gap: 10px; margin: 30px 0; }
         .socialLink{ width: 60px; height: 60px; }
         .footer{ font-size: 11px; }
@@ -1229,7 +1247,9 @@
 
         <div class="topActions">
           <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.05);">
-            <span class="play-icon">▶</span>
+            <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5v14l11-7z" fill="currentColor"/>
+            </svg>
             PLAY NOW
           </a>
         </div>
@@ -1248,7 +1268,9 @@
 
             <div class="ctaRow">
               <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 16px 28px; font-size: 16px; transform: scale(1.1);">
-                <span class="play-icon">▶</span>
+                <svg class="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
                 PLAY NOW
               </a>
               <a href="https://docs.playhighlands.net" class="btn btnPurple" style="padding: 16px 28px; font-size: 16px; transform: scale(1.1);">
@@ -1343,11 +1365,11 @@
 
 
       <section id="features" class="cardsRow">
-        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; justify-self: start; display: block;">
+        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" class="feature-image">
 
-        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" class="feature-image">
 
-        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" class="feature-image">
       </section>
 
       <div class="socialIcons">
