@@ -73,6 +73,46 @@ Fully responsive across all devices:
 - Mobile (600px - 899px)
 - Small mobile (400px - 599px)
 
+## 🚀 Getting Started
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/highlands-game.git
+cd highlands-game
+
+# Install dependencies (if any)
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Uploading to GitHub
+
+1. **Create a new repository on GitHub:**
+   - Go to [github.com](https://github.com) and sign in
+   - Click the "+" icon → "New repository"
+   - Name it `highlands-game` or your preferred name
+   - Don't initialize with README (we already have one)
+   - Click "Create repository"
+
+2. **Connect your local repository:**
+   ```bash
+   # Add the remote origin (replace YOUR_USERNAME with your GitHub username)
+   git remote add origin https://github.com/YOUR_USERNAME/highlands-game.git
+
+   # Push to GitHub
+   git push -u origin main
+   ```
+
+3. **Deploy with Vercel (Recommended):**
+   - Go to [vercel.com](https://vercel.com)
+   - Connect your GitHub account
+   - Import the repository
+   - Deploy automatically
+
 ## 🤝 Contributing
 
 1. Fork the repository
