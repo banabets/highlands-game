@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Lands</title>
+
+    <style>
+      :root{
+        --stroke: rgba(255,255,255,.08);
+        --shadow: 0 18px 40px rgba(0,0,0,.45);
+        --radius: 22px;
+
+        --green2: #1aa956;
+        --gold2: #d79b1f;
+        --purple2: #6b39d8;
+
+        --btnText: #101014;
+        --text: #ffffff;
+        --muted: rgba(255,255,255,.78);
+      }
+
+      *{ box-sizing: border-box; }
+
+      body{
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        color: var(--text);
+
+        background-image: url("https://i.ibb.co/5xgT8zYd/background.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        overflow-x: hidden;
+      }
+
+      .page{
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 18px 18px 44px;
+        background: transparent;
+      }
+
+      .topbar{
+        position: sticky;
+        top: 14px;
+        z-index: 5;
+        margin: 14px auto 18px;
+
+        background: linear-gradient(180deg, rgba(43,27,54,.88), rgba(26,16,35,.86));
+        border: 1px solid var(--stroke);
+        border-radius: 26px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        gap: 12px;
+      }
+
+      .brand{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 8px;
+      }
+
+      .logoBox{
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background:
+          radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0)),
+          linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0));
+        border: 1px solid var(--stroke);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 22px rgba(0,0,0,.25);
+      }
+
+      .logoBox span{
+        font-weight: 900;
+        letter-spacing: .5px;
+        font-size: 16px;
+      }
+
+      .brandTitle{
+        font-weight: 900;
+        letter-spacing: .4px;
+        font-size: 16px;
+        line-height: 1.1;
+      }
+
+      .brandSub{
+        font-size: 12px;
+        opacity: .75;
+        margin-top: 2px;
+      }
+
+      .nav{
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 4px 10px;
+      }
+
+      .nav a{
+        color: rgba(255,255,255,.9);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 13px;
+        opacity: .92;
+      }
+
+      .nav a:hover{ opacity: 1; }
+
+      .topActions{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .btn{
+        border: 0;
+        cursor: pointer;
+        font-weight: 900;
+        font-size: 13px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 12px 26px rgba(0,0,0,.28);
+        transform: translateZ(0);
+      }
+
+      .btn:active{ transform: translateY(1px); }
+
+      .btnGold{
+        background: linear-gradient(180deg, #ffd878, var(--gold2));
+        color: var(--btnText);
+      }
+
+      .btnPurple{
+        background: linear-gradient(180deg, #c9a7ff, var(--purple2));
+        color: #0f0f14;
+      }
+
+      .btnGreen{
+        background: linear-gradient(180deg, #55ef8b, var(--green2));
+        color: #08130b;
+      }
+
+      .btnWhitepaper{
+        background: linear-gradient(180deg, #ffd878, #d29312);
+        color: #1c1205;
+      }
+
+      .pill{
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(0,0,0,.35);
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,.3);
+      }
+
+      .panel{
+        background: linear-gradient(180deg, rgba(43,27,54,.85), rgba(26,16,35,.85));
+        border: 1px solid var(--stroke);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .heroGrid{
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .heroLeft{
+        padding: 22px 22px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 420px;
+      }
+
+      .heroTitle{
+        font-size: 46px;
+        line-height: 1.02;
+        font-weight: 1000;
+        margin: 4px 0 10px;
+        text-shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+
+      .heroTitle .accent{
+        color: #ffe29a;
+      }
+
+      .heroP{
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-weight: 750;
+        font-size: 15px;
+        max-width: 480px;
+      }
+
+      .ctaRow{
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .statsRow{
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255,255,255,.08);
+      }
+
+      .stat{
+        flex: 1 1 150px;
+        min-width: 150px;
+        background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,0));
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 16px;
+        padding: 12px 12px;
+      }
+
+      .statLabel{
+        font-size: 11px;
+        letter-spacing: .7px;
+        opacity: .85;
+        font-weight: 900;
+      }
+
+      .statValue{
+        margin-top: 6px;
+        font-weight: 1000;
+        font-size: 20px;
+      }
+
+      .statIcon{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 10px;
+        margin-right: 8px;
+        background: rgba(0,0,0,.25);
+        border: 1px solid rgba(255,255,255,.12);
+        vertical-align: -6px;
+      }
+
+      .heroRight{
+        padding: 0;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .scene{
+        position: relative;
+        flex: 1;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(0,0,0,.18));
+      }
+
+      .sceneInner{
+        position: absolute;
+        inset: 0;
+        padding: 18px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .sceneCard{
+        width: 64%;
+        max-width: 340px;
+        background: linear-gradient(180deg, rgba(43,27,54,.78), rgba(26,16,35,.74));
+        border: 1px solid rgba(255,255,255,.10);
+        border-radius: 18px;
+        padding: 14px;
+        box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      }
+
+      .sceneCardTitle{
+        font-weight: 1000;
+        font-size: 14px;
+        letter-spacing: .6px;
+        margin: 0 0 8px;
+      }
+
+      .sceneCardText{
+        margin: 0;
+        color: rgba(255,255,255,.78);
+        font-weight: 650;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .sectionTitle{
+        margin: 22px 0 10px;
+        text-align: center;
+        font-size: 34px;
+        font-weight: 1000;
+        letter-spacing: .6px;
+        text-shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+
+      .centerCTA{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 18px;
+      }
+
+      .cardsRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 6px;
+      }
+
+      .featureCard{
+        position: relative;
+        border-radius: 22px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,.10);
+        background: linear-gradient(180deg, rgba(43,27,54,.86), rgba(26,16,35,.82));
+        box-shadow: var(--shadow);
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .cardArt{
+        position: absolute;
+        inset: 0;
+        opacity: .9;
+        background:
+          radial-gradient(500px 220px at 20% 10%, rgba(255,255,255,.18), rgba(255,255,255,0) 55%),
+          radial-gradient(520px 240px at 80% 40%, rgba(53,210,108,.18), rgba(255,255,255,0) 60%),
+          linear-gradient(180deg, rgba(255,255,255,.10), rgba(0,0,0,.18));
+      }
+
+      .cardBody{
+        position: relative;
+        padding: 16px;
+        background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.45));
+      }
+
+      .cardTitle{
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: 1000;
+      }
+
+      .cardBtn{
+        width: 100%;
+        justify-content: center;
+        padding: 12px 14px;
+        border-radius: 16px;
+        font-size: 14px;
+      }
+
+      .btnExpand{
+        background: linear-gradient(180deg, #ffe09a, #d49a1b);
+        color: #1b1206;
+      }
+
+      .btnCashout{
+        background: linear-gradient(180deg, #d1b0ff, #6c3ad9);
+        color: #0f0f14;
+      }
+
+      .bottomBar{
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .wideCta{
+        width: min(720px, 100%);
+        padding: 14px 18px;
+        border-radius: 18px;
+        font-size: 15px;
+        font-weight: 1000;
+      }
+
+      .footer{
+        margin-top: 18px;
+        opacity: .85;
+        text-align: center;
+        font-weight: 700;
+        font-size: 12px;
+        text-shadow: 0 6px 16px rgba(0,0,0,.35);
+      }
+
+      @media (max-width: 900px){
+        .heroGrid{ grid-template-columns: 1fr; }
+        .heroTitle{ font-size: 38px; }
+        .heroLeft{ min-height: unset; }
+        .heroRight{ min-height: 360px; }
+        .cardsRow{ grid-template-columns: 1fr; }
+        .sceneCard{ width: 100%; max-width: unset; }
+        .nav{ display: none; }
+        body{ background-attachment: scroll; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+
+      <header class="topbar">
+        <div class="brand">
+          <div class="logoBox"><span>HL</span></div>
+          <div>
+            <div class="brandTitle">HIGH LANDS</div>
+            <div class="brandSub">Grow, harvest, earn</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#whitepaper">Whitepaper</a>
+          <a href="#discord">Join Discord</a>
+        </nav>
+
+        <div class="topActions">
+          <button class="btn btnGold" type="button">
+            <span class="pill"></span>
+            Connect Wallet
+          </button>
+          <button class="btn btnPurple" type="button">
+            <span class="pill"></span>
+            Join Discord
+          </button>
+        </div>
+      </header>
+
+      <main id="home" class="heroGrid">
+        <section class="panel heroLeft">
+          <div>
+            <h1 class="heroTitle">
+              Grow, Harvest & Earn<br />
+              <span class="accent">in High Lands</span>
+            </h1>
+
+            <p class="heroP">
+              Start your cannabis farming adventure and earn rewards in the ultimate farming simulation game.
+            </p>
+
+            <div class="ctaRow">
+              <button class="btn btnGreen" type="button">PLAY NOW</button>
+              <button class="btn btnWhitepaper" type="button">WHITEPAPER</button>
+            </div>
+          </div>
+
+          <div class="statsRow">
+            <div class="stat">
+              <div class="statLabel"><span class="statIcon">👥</span>ONLINE PLAYERS</div>
+              <div class="statValue">6,017</div>
+            </div>
+            <div class="stat">
+              <div class="statLabel"><span class="statIcon">🪙</span>REWARDS EARNED</div>
+              <div class="statValue">23,384,583</div>
+            </div>
+            <div class="stat">
+              <div class="statLabel"><span class="statIcon">🌿</span>$HIGH REWARDS</div>
+              <div class="statValue">$HIGH</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel heroRight">
+          <div class="scene">
+            <div class="sceneInner">
+              <div class="sceneCard">
+                <div class="sceneCardTitle">Gameplay media</div>
+                <p class="sceneCardText">
+                  Replace this placeholder with your actual scene image or a short loop video from gameplay.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <h2 class="sectionTitle">EARN WHILE YOU PLAY</h2>
+
+      <div class="centerCTA">
+        <button class="btn btnGreen wideCta" type="button">CONNECT WALLET</button>
+      </div>
+
+      <section id="features" class="cardsRow">
+        <article class="featureCard">
+          <div class="cardArt"></div>
+          <div class="cardBody">
+            <h3 class="cardTitle">Grow & Harvest<br />Your Plants</h3>
+            <button class="btn btnGreen cardBtn" type="button">GROW</button>
+          </div>
+        </article>
+
+        <article class="featureCard">
+          <div class="cardArt"></div>
+          <div class="cardBody">
+            <h3 class="cardTitle">Level Up & Expand<br />Your Farm</h3>
+            <button class="btn btnExpand cardBtn" type="button">EXPAND</button>
+          </div>
+        </article>
+
+        <article class="featureCard">
+          <div class="cardArt"></div>
+          <div class="cardBody">
+            <h3 class="cardTitle">Cash Out<br />$HIGH Rewards</h3>
+            <button class="btn btnCashout cardBtn" type="button">CASH OUT</button>
+          </div>
+        </article>
+      </section>
+
+      <div class="bottomBar">
+        <button class="btn btnGreen wideCta" type="button">CONNECT WALLET</button>
+      </div>
+
+      <div class="footer">
+        © High Lands. All rights reserved.
+      </div>
+
+    </div>
+  </body>
+</html>
+e

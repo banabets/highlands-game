@@ -1,0 +1,33 @@
+{
+  "name": "highlands-game",
+  "version": "1.0.0",
+  "description": "High Lands - The ultimate cannabis farming simulation game on Solana blockchain",
+  "main": "index.php",
+  "scripts": {
+    "dev": "php -S localhost:8000",
+    "dev:python": "python -m http.server 8000",
+    "build": "echo 'PHP site - no build required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "gaming",
+    "blockchain",
+    "solana",
+    "web3",
+    "farming-simulation",
+    "nft"
+  ],
+  "author": "UNICORN LABS",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicorn-labs/highlands.git"
+  },
+  "homepage": "https://playhighlands.net",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^28.0.0"
+  }
+}
