@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/cannabism.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/cannabism.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/cannabism.png" />
-    <title>High Lands - Cannabis Farming Simulation Game</title>
+    <title>High Lands - Cannabis Farming Simulation Game v2.1</title>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
     <style>
