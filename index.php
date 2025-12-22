@@ -148,12 +148,6 @@
         position: relative;
       }
 
-      .brand img{
-        position: absolute;
-        left: 45px;
-        top: -10px;
-        z-index: 10;
-      }
 
 
       .brandTitle{
@@ -991,7 +985,6 @@
       @media (max-width: 1200px){
         .page{ max-width: 100%; padding: 18px 12px; }
         .topbar{ width: 100%; left: 0; transform: none; padding: 8px 20px; }
-        .brand img{ width: 120px; height: 120px; left: 45px; top: -10px; }
         .topActions{ right: 20px; }
         .heroGrid{ gap: 12px; }
         .sectionTitle{ font-size: 50px; }
@@ -1007,7 +1000,6 @@
         .nav{ display: none; }
         body{ background-attachment: scroll; }
         .topbar{ height: 120px; }
-        .brand img{ width: 80px; height: 80px; left: 25px; top: -5px; }
         .sectionTitle{ font-size: 40px; }
         .statsContainer{ padding: 18px; margin-top: 40px; }
         .statsRow{ gap: 15px; }
@@ -1027,7 +1019,6 @@
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
-        .brand img{ width: 110px; height: 110px; left: 5px; top: -5px; }
         .sectionTitle{ font-size: 32px; }
         .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
         .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
@@ -1050,7 +1041,6 @@
         .heroTitle{ font-size: 32px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
-        .brand img{ width: 110px; height: 110px; left: 5px; top: -5px; }
         .sectionTitle{ font-size: 26px; }
         .statsContainer{ padding: 12px; margin-top: 20px; }
         .stat{ padding: 6px 6px; }
@@ -1243,7 +1233,7 @@
 
       <header class="topbar">
         <div class="brand">
-          <img src="assets/gg.png" alt="GG Logo">
+          <img src="assets/gg.png" alt="GG Logo" style="width: 160px; height: 160px; position: absolute; left: 45px; top: -10px; z-index: 10;">
         </div>
 
         <nav class="nav">
