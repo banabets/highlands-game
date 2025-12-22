@@ -1016,7 +1016,7 @@
       @media (max-width: 600px){
         .heroTitle{ font-size: 55px; line-height: 0.95; }
         .heroP{ font-size: 30px; margin: 30px auto 12px; }
-        .ctaRow{ gap: 30px; flex-direction: column; }
+        .ctaRow{ gap: 15px; flex-direction: row; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
         .sectionTitle{ font-size: 32px; }
@@ -1265,13 +1265,13 @@
             </p>
 
             <div class="ctaRow">
-              <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 16px 28px; font-size: 16px; transform: scale(1.1);">
-                <svg class="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.0);">
+                <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 5v14l11-7z" fill="currentColor"/>
                 </svg>
                 PLAY NOW
               </a>
-              <a href="https://docs.playhighlands.net" class="btn btnPurple" style="padding: 16px 28px; font-size: 16px; transform: scale(1.1);">
+              <a href="https://docs.playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.0);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
                   <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="#ffffff"/>
                 </svg>
