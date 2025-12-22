@@ -1005,7 +1005,7 @@
 
       /* TABLETS GRANDES - Cambios específicos para tablets grandes */
       @media (max-width: 1200px){
-        .page{ max-width: 100%; padding: 18px 12px 50px !important; margin: 0 !important; }
+        .page{ max-width: 100%; padding: 18px 12px 100px !important; margin: 0 !important; }
         .topbar{ width: 100%; left: 0; transform: none; padding: 8px 20px; }
           /* Logo: Cambia posición a 20px en tablets grandes */
         .brand img{ left: 20px; }
@@ -1075,7 +1075,7 @@
 
       /* MÓVILES PEQUEÑOS - Cambios para móviles pequeños */
       @media (max-width: 400px){
-        .page{ padding: 12px 8px 50px !important; margin: 0 !important; }
+        .page{ padding: 12px 8px 100px !important; margin: 0 !important; }
         .heroTitle{ font-size: 24px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
