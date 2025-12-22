@@ -1019,6 +1019,7 @@
         .ctaRow{ gap: 15px; flex-direction: row; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
+        .brand img{ width: 110px; height: 110px; left: 5px; top: -5px; }
         .sectionTitle{ font-size: 32px; }
         .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
         .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
@@ -1233,7 +1234,7 @@
 
       <header class="topbar">
         <div class="brand">
-          <img src="assets/gg.png" alt="GG Logo" style="width: 110px; height: 110px; position: absolute; left: -190px; top: 50%; transform: translateY(-50%); z-index: 10;">
+          <img src="assets/gg.png" alt="GG Logo" style="width: 160px; height: 160px; position: absolute; left: 45px; top: -10px; z-index: 10;">
         </div>
 
         <nav class="nav">
