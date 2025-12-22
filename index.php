@@ -62,8 +62,9 @@
         overscroll-behavior: none;
         -webkit-overflow-scrolling: touch;
         min-height: 100vh;
+        background-color: #0a0a0a;
 
-        background-image: url("assets/background_optimized.jpg");
+        background-image: url("assets/background.png");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
@@ -1025,7 +1026,7 @@
         .nav{ gap: 12px; padding: 2px 8px; left: auto; right: 20px; top: 42%; transform: none; }
         .nav a{ font-size: 14px; }
         .nav a:last-child{ display: none; }
-        body{ background-attachment: fixed; background-size: cover; }
+        body{ background-attachment: scroll; background-size: cover; }
         .topbar{ height: 120px; }
         /* Logo: Cambia tamaño a 115x115, mantiene posición 20px en tablets pequeñas */
         .brand img{ width: 115px; height: 115px; left: 20px; }
@@ -1411,11 +1412,11 @@
 
 
       <section id="features" class="cardsRow">
-        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; justify-self: start; display: block;">
+        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; justify-self: start; display: block; margin: 15px 0;">
 
-        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 15px auto 0px auto; display: block;">
 
-        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0px auto 15px auto; display: block;">
       </section>
 
       <div class="socialIcons">
