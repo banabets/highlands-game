@@ -102,6 +102,9 @@
         width: 1500px;
         left: 50%;
         transform: translateX(-50%);
+        width: 1500px;
+        left: 50%;
+        transform: translateX(-50%);
 
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255,255,255,0.2);
