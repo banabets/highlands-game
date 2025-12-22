@@ -54,16 +54,12 @@
 
       *{ box-sizing: border-box; }
 
-      html, body{
-        margin: 0 !important;
-        padding: 0 !important;
+      body{
+        margin: 0;
         font-family: 'Orbitron', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
         color: var(--text);
-        overscroll-behavior: none;
-        -webkit-overflow-scrolling: touch;
-        min-height: 100vh;
 
-        background-image: url("assets/background_optimized.jpg");
+        background-image: url("assets/background.png");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
@@ -149,13 +145,9 @@
         align-items: center;
         gap: 10px;
         padding: 6px 8px;
+        position: relative;
       }
 
-      .brand img{
-        width: 160px;
-        height: 160px;
-        left: 45px;
-      }
 
 
       .brandTitle{
@@ -315,9 +307,12 @@
 
       .play-icon{
         margin-right: 8px;
-        font-size: 16px;
-        font-weight: bold;
         opacity: 0.9;
+      }
+
+      .play-icon svg{
+        width: 16px;
+        height: 16px;
       }
 
       .btnWhitepaper{
@@ -413,7 +408,7 @@
         font-family: 'Lilita One', cursive;
         font-weight: 400;
         font-size: 30px;
-        max-width: 800px;
+        max-width: 600px;
         text-align: center;
         text-shadow: none;
       }
@@ -424,12 +419,6 @@
         flex-wrap: wrap;
         margin-top: 50px;
         justify-content: center;
-      }
-
-      .ctaRow .btn{
-        padding: 16px 28px;
-        font-size: 16px;
-        transform: scale(1.1);
       }
 
       .statsContainer{
@@ -450,8 +439,8 @@
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin: 40px 0 5px 0;
-        padding: 20px 0 5px 0;
+        margin: 40px 0;
+        padding: 20px 0;
       }
 
       .socialLink{
@@ -669,7 +658,7 @@
         min-height: 420px;
         display: flex;
         flex-direction: column;
-        max-width: 800px;
+        max-width: 500px;
         margin: 0 auto;
       }
 
@@ -747,6 +736,15 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         margin-top: 6px;
+      }
+
+      .feature-image{
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 22px;
+        display: block;
+        margin: 0 auto;
       }
 
       .featureCard{
@@ -976,7 +974,7 @@
       }
 
       .footer{
-        margin-top: 0px;
+        margin-top: 18px;
         opacity: .85;
         text-align: center;
         font-weight: 400;
@@ -984,36 +982,14 @@
         text-shadow: 0 6px 16px rgba(0,0,0,.35);
       }
 
-      @media (min-width: 901px) {
-        .footer {
-          margin-top: 18px !important;
-        }
-        .socialIcons {
-          margin-bottom: 40px !important;
-          padding-bottom: 20px !important;
-        }
-      }
-
-      /*
-      === ESTRATEGIA RESPONSIVE ===
-      - Desktop (>1200px): Estilos base en .brand img (160x160, left:45px) - definido en CSS
-      - Cada media query SOLO modifica lo necesario para ese breakpoint
-      - Los estilos se acumulan: cada breakpoint más pequeño hereda del anterior
-      - NUNCA modificar estilos desktop desde media queries
-      */
-
-      /* TABLETS GRANDES - Cambios específicos para tablets grandes */
       @media (max-width: 1200px){
-        .page{ max-width: 100%; padding: 18px 12px 50px !important; margin: 0 !important; }
+        .page{ max-width: 100%; padding: 18px 12px; }
         .topbar{ width: 100%; left: 0; transform: none; padding: 8px 20px; }
-          /* Logo: Cambia posición a 20px en tablets grandes */
-        .brand img{ left: 20px; }
         .topActions{ right: 20px; }
         .heroGrid{ gap: 12px; }
         .sectionTitle{ font-size: 50px; }
       }
 
-      /* TABLETS PEQUEÑOS/MÓVILES GRANDES - Cambios para tablets pequeñas */
       @media (max-width: 900px){
         .heroGrid{ grid-template-columns: 1fr; }
         .heroTitle{ font-size: 38px; }
@@ -1021,16 +997,11 @@
         .heroRight{ min-height: 360px; }
         .cardsRow{ grid-template-columns: 1fr; gap: 30px; }
         .sceneCard{ width: 100%; max-width: unset; }
-        .topActions{ display: none; }
-        .nav{ gap: 12px; padding: 2px 8px; left: auto; right: 20px; top: 42%; transform: none; }
-        .nav a{ font-size: 14px; }
-        .nav a:last-child{ display: none; }
-        body{ background-attachment: fixed; background-size: cover; }
+        .nav{ display: none; }
+        body{ background-attachment: scroll; }
         .topbar{ height: 120px; }
-        /* Logo: Cambia tamaño a 115x115, mantiene posición 20px en tablets pequeñas */
-        .brand img{ width: 115px; height: 115px; left: 20px; }
         .sectionTitle{ font-size: 40px; }
-        .statsContainer{ padding: 18px 45px; margin-top: 40px; width: 100%; max-width: 100%; }
+        .statsContainer{ padding: 18px; margin-top: 40px; }
         .statsRow{ gap: 15px; }
         .statGroup{ min-width: 100px; }
         .stat{ padding: 8px 8px; }
@@ -1039,69 +1010,47 @@
         .caSection{ flex-direction: column; gap: 20px; }
         .caContainer{ max-width: 100%; }
         .socialIcons{ gap: 15px; }
-        .socialLink{ width: 85px; height: 85px; }
+        .socialLink{ width: 70px; height: 70px; }
       }
 
-      /* MÓVILES GRANDES - Cambios para móviles grandes */
-      @media (max-width: 800px){
-        .heroTitle{ font-size: 60px; line-height: 0.95; }
+      @media (max-width: 600px){
+        .heroTitle{ font-size: 55px; line-height: 0.95; }
         .heroP{ font-size: 30px; margin: 30px auto 12px; }
-        .ctaRow{ gap: 25px; flex-direction: row; }
-        .ctaRow .btn{ padding: 15px 24px; font-size: 16px; transform: scale(1.0); }
-        .ctaRow .play-icon{ display: none; }
-        .ctaRow svg{ display: none; }
+        .ctaRow{ gap: 15px; flex-direction: row; }
         .topbar{ height: 100px; }
-        /* Logo: Mantiene tamaño 115x115 y posición 20px en móviles grandes */
-        .brand img{ width: 115px; height: 115px; left: 20px; }
+        .brand{ padding: 8px 12px; }
+        .brand img{ width: 110px; height: 110px; left: 5px; top: -5px; }
         .sectionTitle{ font-size: 32px; }
-        .statsContainer{ padding: 15px 40px; margin-top: 30px; width: 100%; max-width: 100%; }
-        .statsRow{ flex-direction: row; gap: 15px; align-items: center; justify-content: space-around; }
-        .statGroup{ min-width: 120px; width: auto; text-align: center; }
+        .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
+        .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
+        .statGroup{ min-width: unset; width: 100%; text-align: center; padding: 15px 10px; }
+        .statLabel{ font-size: 12px; margin-bottom: 8px; }
+        .statValue{ font-size: 18px; }
+        .play-icon{ margin-right: 6px; font-size: 14px; }
         .videoContainer{ margin: 20px auto; }
         .tvFrame{ padding: 20px; }
-        .caSection{ transform: translateY(-350px) !important; }
-        h2.sectionTitle:not(#grow-title){ margin-top: 5px !important; }
-        h2.sectionTitle{ transform: translateY(-300px) !important; }
-        .videoContainer{ transform: translateY(-300px) !important; }
-        .socialIcons{ gap: 10px; margin: 10px 0 5px 0 !important; padding: 20px 0 5px 0 !important; transform: translateY(-200px) !important; }
-        img[alt="Box"]{ width: 100% !important; max-width: 800px !important; height: auto !important; transform: translateY(-300px) !important; }
-        img[alt="Grow & Harvest Your Plants"]{ margin-left: 28px !important; margin-top: 15px !important; }
-        .buy-nfts-btn{ transform: translateY(-300px) !important; }
-        #features{ transform: translateY(-300px) !important; }
-        .socialLink{ width: 85px; height: 85px; }
-        .footer{ font-size: 11px; margin-top: 0px !important; }
+        .caSection{ margin: 15px auto 15px; }
+        .cardsRow{ gap: 20px; grid-template-columns: 1fr; }
+        .feature-image{ width: 100%; max-width: 350px; height: 400px; }
+        .socialIcons{ gap: 10px; margin: 30px 0; }
+        .socialLink{ width: 60px; height: 60px; }
+        .footer{ font-size: 11px; }
       }
 
-      /* MÓVILES PEQUEÑOS - Cambios para móviles pequeños */
       @media (max-width: 400px){
-        .page{ padding: 12px 8px 50px !important; margin: 0 !important; }
-        .heroTitle{ font-size: 24px; }
+        .page{ padding: 12px 8px; }
+        .heroTitle{ font-size: 32px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
-        /* Logo: Mantiene tamaño 115x115 y posición 20px en móviles pequeños */
-        .brand img{ width: 115px; height: 115px; left: 20px; }
         .sectionTitle{ font-size: 26px; }
-        .statsContainer{ padding: 12px 35px; margin-top: 20px; width: 100%; max-width: 100%; }
+        .statsContainer{ padding: 12px; margin-top: 20px; }
         .stat{ padding: 6px 6px; }
         .statLabel{ font-size: 9px; }
         .statValue{ font-size: 14px; }
         .videoContainer{ margin: 15px auto; }
         .tvFrame{ padding: 15px; }
-        .socialIcons{ gap: 8px; margin: 10px 0 15px 0 !important; padding: 20px 0 15px 0 !important; transform: translateY(-200px) !important; }
-        .socialLink{ width: 65px; height: 65px; }
-        h2.sectionTitle:not(#grow-title){ margin-top: 5px !important; }
-        h2.sectionTitle{ transform: translateY(-300px) !important; }
-        .videoContainer{ transform: translateY(-300px) !important; }
-        .socialIcons{ transform: translateY(-300px) !important; }
-        img[alt="Box"]{ width: 100% !important; max-width: 800px !important; height: auto !important; transform: translateY(-300px) !important; }
-        img[alt="Grow & Harvest Your Plants"]{ margin-left: 28px !important; margin-top: 15px !important; }
-        .buy-nfts-btn{ transform: translateY(-300px) !important; }
-        #features{ transform: translateY(-300px) !important; }
-        .footer{ margin-top: 0px !important; }
-        .caSection{ transform: translateY(-350px) !important; }
-        .footer{ margin-top: 0px !important; }
-        #grow-title{ margin-top: 30px !important; }
-        #grow-title{ margin-top: 30px !important; }
+        .socialIcons{ gap: 8px; margin: 20px 0; }
+        .socialLink{ width: 50px; height: 50px; }
       }
     </style>
     <script>
@@ -1285,7 +1234,7 @@
 
       <header class="topbar">
         <div class="brand">
-          <img src="assets/gg.png" alt="GG Logo" style="position: absolute; top: -10px; z-index: 10;">
+          <img src="assets/gg.png" alt="GG Logo" style="width: 160px; height: 160px; position: absolute; left: 45px; top: -10px; z-index: 10;">
         </div>
 
         <nav class="nav">
@@ -1297,7 +1246,9 @@
 
         <div class="topActions">
           <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.05);">
-            <span class="play-icon">▶</span>
+            <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5v14l11-7z" fill="currentColor"/>
+            </svg>
             PLAY NOW
           </a>
         </div>
@@ -1315,11 +1266,13 @@
             </p>
 
             <div class="ctaRow">
-              <a href="https://playhighlands.net" class="btn btnPurple">
-                <span class="play-icon">▶</span>
+              <a href="https://playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.0);">
+                <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
                 PLAY NOW
               </a>
-              <a href="https://docs.playhighlands.net" class="btn btnPurple">
+              <a href="https://docs.playhighlands.net" class="btn btnPurple" style="padding: 12px 20px; font-size: 14px; transform: scale(1.0);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
                   <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="#ffffff"/>
                 </svg>
@@ -1394,14 +1347,14 @@
         </div>
       </div>
 
-      <h2 class="sectionTitle" style="margin-top: 50px;" id="grow-title" style="margin-top: 60px !important;">EVERY GROW TAKES YOU HIGHER</h2>
+      <h2 class="sectionTitle" style="margin-top: 50px;">EVERY GROW TAKES YOU HIGHER</h2>
 
       <div style="display: flex; justify-content: center; margin: 30px 0;">
         <img src="assets/box.png" alt="Box" style="width: 1024px; height: auto;">
       </div>
 
       <div style="display: flex; justify-content: center; margin: 10px 0 80px 0;">
-        <button class="btn btnPurple buy-nfts-btn" type="button" style="padding: 20px 40px; font-size: 18px; transform: scale(1.2);">
+        <button class="btn btnPurple" type="button" style="padding: 20px 40px; font-size: 18px; transform: scale(1.2);">
           BUY NF'TS (SOON)
         </button>
       </div>
@@ -1411,11 +1364,11 @@
 
 
       <section id="features" class="cardsRow">
-        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; justify-self: start; display: block;">
+        <img src="assets/content1.png" alt="Grow & Harvest Your Plants" class="feature-image">
 
-        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content2.png" alt="Level Up & Expand Your Farm" class="feature-image">
 
-        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" style="width: 350px; height: 500px; object-fit: cover; border-radius: 22px; margin: 0 auto; display: block;">
+        <img src="assets/content3.png" alt="Cash Out $HIGH Rewards" class="feature-image">
       </section>
 
       <div class="socialIcons">
@@ -1441,7 +1394,7 @@
         </a>
       </div>
 
-      <div class="footer" style="margin-top: 0px !important;">
+      <div class="footer">
         © High Lands. All rights reserved by UNICORN LABS 2025.
       </div>
 
