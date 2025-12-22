@@ -1233,7 +1233,7 @@
 
       <header class="topbar">
         <div class="brand">
-          <img src="assets/gg.png" alt="GG Logo" style="width: 110px; height: 110px; position: absolute; left: -200px; top: 50%; transform: translateY(-50%); z-index: 10;">
+          <img src="assets/gg.png" alt="GG Logo" style="width: 110px; height: 110px; position: absolute; left: -180px; top: 50%; transform: translateY(-50%); z-index: 10;">
         </div>
 
         <nav class="nav">
