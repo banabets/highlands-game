@@ -1015,7 +1015,7 @@
 
       @media (max-width: 600px){
         .heroTitle{ font-size: 55px; line-height: 0.95; }
-        .heroP{ font-size: 24px; margin: 30px auto 12px; }
+        .heroP{ font-size: 30px; margin: 30px auto 12px; }
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
