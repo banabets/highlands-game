@@ -1019,7 +1019,7 @@
         .ctaRow{ gap: 30px; flex-direction: column; }
         .topbar{ height: 100px; }
         .brand{ padding: 8px 12px; }
-        .brand img{ width: 110px; height: 110px; left: 15px; top: -5px; }
+        .brand img{ width: 110px; height: 110px; left: 10px; top: -5px; }
         .sectionTitle{ font-size: 32px; }
         .statsContainer{ padding: 20px; margin-top: 20px; max-width: 100%; }
         .statsRow{ flex-direction: column; gap: 15px; align-items: center; }
@@ -1042,7 +1042,7 @@
         .heroTitle{ font-size: 32px; }
         .heroP{ font-size: 20px; }
         .topbar{ height: 80px; padding: 6px 15px; }
-        .brand img{ width: 110px; height: 110px; left: 15px; top: -5px; }
+        .brand img{ width: 110px; height: 110px; left: 10px; top: -5px; }
         .sectionTitle{ font-size: 26px; }
         .statsContainer{ padding: 12px; margin-top: 20px; }
         .stat{ padding: 6px 6px; }
