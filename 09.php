@@ -1299,6 +1299,10 @@
                 <div class="statLabel">SOLANA PRICE</div>
                 <div class="statValue">$142.50</div>
               </div>
+              <div class="statGroup">
+                <div class="statLabel">PLANT FARMING PRICE</div>
+                <div class="statValue">0.01 SOL</div>
+              </div>
             </div>
           </div>
         </section>
